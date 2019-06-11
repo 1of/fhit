@@ -1,21 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic');
-$color-blue: #3a93c3;
+$color-blue: rgb(61, 94, 161);
+$color-dark-blue: rgb(0, 46, 93);
+$color-white: #fff;
 
-/* ABOUT INTRO
+/* Global
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {
-    background: url(../img/track-blue-bg.jpg);
-    background-size: cover;
+    background-color: $color-blue;
 }
 header {
-    background: linear-gradient(#fff 60%, transparent 90%);
+    background: $color-dark-blue;
+    color: $color-white;
 }
-.input-group-text {
-    background-color: #fff;
-    border-right: none;
+
+/* Search Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.search-page {
+    .input-group-text {
+        background-color: $color-white;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .form-control {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    label {
+        color: $color-white;
+    }
+    .svg-icon {
+        width: 20px;
+    }
 }
-.svg-icon {
-    width: 20px;
-}
+
 @media (min-width: 767px) {
 }
