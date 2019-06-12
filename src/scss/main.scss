@@ -1,15 +1,78 @@
+@import url(//db.onlinewebfonts.com/c/9ae5e19516bc6428f1327ff3311b2617?family=DINNextW01-Light);
 $color-blue: rgb(61, 94, 161);
+$color-light-blue: #a0c2e8;
 $color-dark-blue: rgb(0, 46, 93);
 $color-white: #fff;
 
 /* Global
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-white;
+}
 body {
     background-color: $color-blue;
 }
 header {
     background: $color-dark-blue;
     color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    .breadcrumbs {
+        display: flex;
+    }
+    .breadcrumb {
+        background-color: transparent;
+        margin: 4px auto;
+        .breadcrumb-item {
+            a {
+                color: #ccc;
+            }
+            &.active {
+                color: $color-white;
+            }
+        }
+    }
+    .login {
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+        .logout-link {
+            margin: 8px 0;
+        }
+    }
+}
+.navbar {
+    background-color: $color-dark-blue;
+    width: 30%;
+}
+.navbar-brand {
+    color: $color-white;
+    letter-spacing: 0.15em;
+    font: normal normal normal 24px/1.4em 'DINNextW01-Light', sans-serif;
+    text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px,
+        #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
+}
+hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+.description {
+    margin-top: 0.6rem;
+}
+.nav-link {
+    color: $color-light-blue;
+}
+.description {
+    color: $color-white;
+    margin-bottom: 0.2rem;
 }
 
 /* Search Page
@@ -30,6 +93,35 @@ header {
     }
     .svg-icon {
         width: 20px;
+    }
+}
+
+/* Verification Status Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.verification-status {
+    h3 {
+        padding: 0.8rem 0;
+    }
+
+    .refresh {
+        background-image: url('../img/refresh_icon.svg');
+        height: 30px;
+        width: 30px;
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .table {
+        td {
+            vertical-align: middle;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .eye img {
+        width: 32px;
+        cursor: pointer;
     }
 }
 

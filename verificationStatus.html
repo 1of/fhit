@@ -9,28 +9,267 @@
         <link rel="stylesheet" href="./css/main.css" />
         <title>Verification Status</title>
     </head>
-    <body>
-        <main>
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                      <a class="navbar-brand" href="#">Hidden brand</a>
-                    </div>
+    <body class="verification-status">
+        <header>
+            <nav class="navbar">
+                <button
+                    class="navbar-toggler navbar-dark"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <a class="navbar-brand" href="#">FHIT.IO</a>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">HomeCancer Care Dashboard</a>
+                            <a class="nav-link" href="#">Menu Item 1</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Verification status</a>
+                            <a class="nav-link" href="#">Menu Item 2</a>
                         </li>
-                      </ul>
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Logout</a>
-                  </nav>
-            </header>
-            <section></section>
+                    </ul>
+                </div>
+            </nav>
+            <nav aria-label="breadcrumb" class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">HomeCancer Care Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Verification status
+                    </li>
+                </ol>
+            </nav>
+            <div class="login">
+                <a
+                    class="nav-link logout-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Logout</a
+                >
+            </div>
+        </header>
+        <main>
+            <!--hospital and pacient description-->
+            <section class="description">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm col-6">
+                            <p>Royal London Hospital</p>
+                            <p>Great Ormand St. Holborn London WCiN 3HR, UK</p>
+                            <p>+44 20 34567890</p>
+                        </div>
+                        <div class="col-sm col-6 text-sm-right">
+                            <p>Dr. James Gareth MD</p>
+                            <p>Resident Oncologist</p>
+                            <p>ID: <span>L324456</span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm">
+                            <h2>Patient Demographic Information</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-sm-5">
+                            <p>Mr. Jordan Smith</p>
+                            <p>24, Main Street</p>
+                            <p>Hackensack, New Jersey 08730</p>
+                            <p>(201)992-3456</p>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <p>Date of Birth - <span>24/03/1978</span></p>
+                            <p>Sex: <span>Male</span></p>
+                            <p>Ethnicity: <span>Declined to specify</span></p>
+                            <p>Race: <span>Declined to specify</span></p>
+                        </div>
+                        <div class="col-sm-4 col-6 text-sm-right">
+                            <p>
+                                Insurance Name:
+                                <span>national Benefit Fund</span>
+                            </p>
+                            <p>Insurance ID: <span>A34456</span></p>
+                            <p>Relationship: <span>Self</span></p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </section>
+            <section>
+                <!--Condition-->
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <h3>Condition</h3>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">S.No</th>
+                                    <th scope="col">Condition</th>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Clinical Status</th>
+                                    <th scope="col">Verification Status</th>
+                                    <th scope="col">Onset Date</th>
+                                    <th scope="col">Encounter Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-light">
+                                    <th scope="row">1</th>
+                                    <td>Pulmonary Blastoma</td>
+                                    <td>SNOMED CT-189815007</td>
+                                    <td>Active</td>
+                                    <td>
+                                        Provisional
+                                        <span class="eye"
+                                            ><img src="./img/eye.svg" alt="view"
+                                        /></span>
+                                    </td>
+                                    <td>03-05-2019</td>
+                                    <td>07-05-2019</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="row">2</th>
+                                    <td>Anemia</td>
+                                    <td>SNOMED CT-271737000</td>
+                                    <td>Active</td>
+                                    <td>
+                                        Unconfirmed
+                                        <span class="eye"
+                                            ><img src="./img/eye.svg" alt="view"
+                                        /></span>
+                                    </td>
+                                    <td>03-05-2019</td>
+                                    <td>07-05-2019</td>
+                                </tr>
+                                <tr class="table-secondary text-center">
+                                    <th scope="row"></th>
+                                    <td>
+                                        <button class="btn btn-light">
+                                            &lt;&lt;
+                                        </button>
+                                    </td>
+                                    <td><span>1</span></td>
+                                    <td colspan="2">
+                                        <div class="row form-group">
+                                            <select
+                                                class="form-control col-4 col-sm-4 col-lg-2"
+                                                id="itemsPerPage"
+                                            >
+                                                <option>20</option>
+                                                <option>40</option>
+                                                <option>60</option>
+                                                <option>All</option>
+                                            </select>
+                                            <label
+                                                class="col-form-label col-12 col-sm-8 col-lg-10 text-left"
+                                                for="itemsPerPage"
+                                                >items per page</label
+                                            >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="text-left">1-1 of 2 items</p>
+                                    </td>
+                                    <td class="text-left">
+                                        <button
+                                            class="refresh btn btn-light"
+                                        ></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Observation Laboratory-->
+                    <div class="table-responsive">
+                        <h3>Observation Laboratory</h3>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">S.No</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">System</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-light">
+                                    <th scope="row">1</th>
+                                    <td>Hemoglobin A1c/Hemo</td>
+                                    <td>6.2%</td>
+                                    <td>LOINC-4548-4</td>
+                                    <td>06-01-2019</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="row">2</th>
+                                    <td>RBC # Bld Auto</td>
+                                    <td>4.58 10*6/uL</td>
+                                    <td>LOINC-789-8</td>
+                                    <td>06-01-2019</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="row">3</th>
+                                    <td>MCHC RBC Auto-mCnc</td>
+                                    <td>34.7 g/dL</td>
+                                    <td>LOINC-786-4</td>
+                                    <td>06-02-2019</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="row">4</th>
+                                    <td>Cancer Screening</td>
+                                    <td></td>
+                                    <td>LOINC-63921-1</td>
+                                    <td>06-02-2019</td>
+                                </tr>
+                                <tr class="table-secondary text-center">
+                                    <th scope="row"></th>
+                                    <td>
+                                        <button class="btn btn-light">
+                                            &lt;&lt;
+                                        </button>
+                                    </td>
+                                    <td class="text-left"><span>1</span></td>
+                                    <td>
+                                        <div class="row form-group">
+                                            <select
+                                                class="form-control col-9 col-sm-4 col-lg-2"
+                                                id="itemsPerPage"
+                                            >
+                                                <option>20</option>
+                                                <option>40</option>
+                                                <option>60</option>
+                                                <option>All</option>
+                                            </select>
+                                            <label
+                                                class="col-form-label col-12 col-sm-8 col-lg-10 text-left"
+                                                for="itemsPerPage"
+                                                >items per page</label
+                                            >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <p class="text-left">
+                                                1-1 of 2 items
+                                            </p>
+                                            <button
+                                                class="refresh btn btn-light offset-2"
+                                            ></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </main>
         <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
         <script src="./libs/bootstrap/bootstrap.min.js"></script>
