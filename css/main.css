@@ -114,6 +114,12 @@ hr {
   width: 20px;
 }
 
+.search-page .description {
+  background: #002e5d;
+  margin-top: 0;
+  padding-top: 0.6rem;
+}
+
 /* Verification Status Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .verification-status h3 {
