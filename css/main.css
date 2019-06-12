@@ -24,6 +24,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 header .breadcrumbs {
@@ -61,6 +64,9 @@ header .login .logout-link {
 
 .navbar {
   background-color: #002e5d;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 30%;
 }
 
@@ -68,7 +74,7 @@ header .login .logout-link {
   color: #fff;
   letter-spacing: 0.15em;
   font: normal normal normal 24px/1.4em 'DINNextW01-Light', sans-serif;
-  text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px, #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
+  text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px, #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
 }
 
 hr {
@@ -90,6 +96,10 @@ hr {
 .description {
   color: #fff;
   margin-bottom: 0.2rem;
+}
+
+#myChart {
+  background: #fff;
 }
 
 /* Search Page
@@ -115,7 +125,6 @@ hr {
 }
 
 .search-page .description {
-  background: #002e5d;
   margin-top: 0;
   padding-top: 0.6rem;
 }
@@ -148,3 +157,14 @@ hr {
   width: 32px;
   cursor: pointer;
 }
+
+/* Display Data Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.charts canvas {
+  background: #fff;
+}
+
+.charts label {
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

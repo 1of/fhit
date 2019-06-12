@@ -10,6 +10,55 @@
         <title>Patient Search</title>
     </head>
     <body>
+            <header>
+                    <nav class="navbar">
+                        <button
+                            class="navbar-toggler navbar-dark"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarToggler"
+                            aria-controls="navbarToggler"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="home-link">
+                            <a href="#" class="nav-link">Home</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarToggler">
+                            <a class="navbar-brand" href="#">FHIT.IO</a>
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Menu Item 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Menu Item 2</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                    </nav>
+                    <nav aria-label="breadcrumb" class="breadcrumbs">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="./patientSearch.html">Cancer Care Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="./verificationStatus.html">Verification status</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="login">
+                        <a
+                            class="nav-link logout-link"
+                            href="#"
+                            tabindex="-1"
+                            aria-disabled="true"
+                            >Logout</a
+                        >
+                    </div>
+                </header>
         <main class="search-page">
             <!--hospital and doctor description-->
             <section class="description">
@@ -26,6 +75,7 @@
                             <p>ID: <span>L324456</span></p>
                         </div>
                     </div>
+                    <hr />
                 </div>
             </section>
             <section>
@@ -186,5 +236,7 @@
                 </form>
             </section>
         </main>
+        <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+        <script src="./libs/bootstrap/bootstrap.min.js"></script>
     </body>
 </html>
