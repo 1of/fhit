@@ -10,54 +10,56 @@
         <title>Display data</title>
     </head>
     <body class="display-data">
-            <header>
-                    <nav class="navbar">
-                        <button
-                            class="navbar-toggler navbar-dark"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarToggler"
-                            aria-controls="navbarToggler"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
+        <header>
+            <nav class="navbar">
+                <button
+                    class="navbar-toggler navbar-dark"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="home-link">
+                    <a href="#" class="nav-link">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <a class="navbar-brand" href="#">FHIT.IO</a>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Menu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu Item 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav aria-label="breadcrumb" class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="./patientSearch.html">Cancer Care Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="./verificationStatus.html"
+                            >Verification status</a
                         >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="home-link">
-                            <a href="#" class="nav-link">Home</a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarToggler">
-                            <a class="navbar-brand" href="#">FHIT.IO</a>
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Menu Item 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Menu Item 2</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <nav aria-label="breadcrumb" class="breadcrumbs">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="./patientSearch.html">Cancer Care Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                    <a href="./verificationStatus.html">Verification status</a>
-                            </li>
-                        </ol>
-                    </nav>
-                    <div class="login">
-                        <a
-                            class="nav-link logout-link"
-                            href="#"
-                            tabindex="-1"
-                            aria-disabled="true"
-                            >Logout</a
-                        >
-                    </div>
-                </header>
+                    </li>
+                </ol>
+            </nav>
+            <div class="login">
+                <a
+                    class="nav-link logout-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Logout</a
+                >
+            </div>
+        </header>
         <main>
             <!--hospital and pacient description-->
             <section class="description">
@@ -77,266 +79,112 @@
                     <hr />
                 </div>
             </section>
-            <section class="charts">    
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                    <h2>
-                                            Clinical Status
-                                    </h2>
-                            </div>
+            <section class="charts">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-center mb-4 mt-4">
+                                Cancer Active Status of Patients of Dr. Gareth
+                                Jones, M.D
+                            </h3>
                         </div>
-                        <!--Chart 1 start-->
-                        <div class="row">
-                                <div class="col-sm-8 offset-sm-2">
-                                        <form>
-                                        <div class="form-group row">
-                                                <label for="inputfromDateChart1" class="col-sm-3 col-md-2 col-form-label offset-lg-1 text-lg-right">From Date</label>
-                                                <div class="col-sm-7 col-md-4 col-lg-3">
-                                                  <input type="date" class="form-control" id="inputfromDateChart1">
-                                                </div>
-                                                <label for="inputtoDateChart1" class="col-sm-3 col-md-2 col-form-label text-lg-right">To Date</label>
-                                                <div class="col-sm-7 col-md-4 col-lg-3">
-                                                  <input type="date" class="form-control" id="inputtoDateChart1">
-                                                </div>
-                                              </div>
-                                        
-                                        </form>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="text-center mb-4 mt-4">Cancer Active Status of Patients of
-                                            Dr. Gareth Jones, M.D
-                                    </h3>
-                                </div>
-                              <div class="col-sm-8 offset-sm-2">
-                                <!--       Chart.js Canvas Tag -->
-                                <canvas id="clinicalChart"></canvas>
-                              </div>
-                            </div>
-                              <!--Chart 2 start-->
-                        <div class="row">
-                                <div class="col-12 mt-4">
-                                        <h2>
-                                                Verification Status
-                                        </h2>
-                                </div>
-                            </div>
-                        <div class="row">
-                                <div class="col-sm-8 offset-sm-2">
-                                        <form>
-                                        <div class="form-group row">
-                                                <label for="inputfromDateChart2" class="col-sm-3 col-md-2 col-form-label offset-lg-1 text-lg-right">From Date</label>
-                                                <div class="col-sm-7 col-md-4 col-lg-3">
-                                                  <input type="date" class="form-control" id="inputfromDateChart2">
-                                                </div>
-                                                <label for="inputtoDateChart2" class="col-sm-3 col-md-2 col-form-label text-lg-right">To Date</label>
-                                                <div class="col-sm-7 col-md-4 col-lg-3">
-                                                  <input type="date" class="form-control" id="inputtoDateChart2">
-                                                </div>
-                                              </div>
-                                        
-                                        </form>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="text-center mb-4 mt-4">Cancer Active Status of Patients of
-                                            Dr. Gareth Jones, M.D
-                                    </h3>
-                                </div>
-                              <div class="col-sm-8 offset-sm-2">
-                                <!--       Chart.js Canvas Tag -->
-                                <canvas id="verificationChart"></canvas>
-                              </div>
-                            </div>
+                        <div class="col-12">
+                            <h2>Clinical Status</h2>
                         </div>
-                         <!--Chart 2 end-->
+                    </div>
+                    <!--Chart 1 start-->
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2">
+                            <form>
+                                <div class="form-group row">
+                                    <label
+                                        for="inputfromDateChart1"
+                                        class="col-sm-3 col-md-2 col-form-label offset-lg-1 text-lg-right"
+                                        >From Date</label
+                                    >
+                                    <div class="col-sm-7 col-md-4 col-lg-3">
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="inputfromDateChart1"
+                                        />
+                                    </div>
+                                    <label
+                                        for="inputtoDateChart1"
+                                        class="col-sm-3 col-md-2 col-form-label text-lg-right"
+                                        >To Date</label
+                                    >
+                                    <div class="col-sm-7 col-md-4 col-lg-3">
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="inputtoDateChart1"
+                                        />
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <!--Chart 1 end-->
-                      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 canvas-box">
+                            <!--       Chart.js Canvas Tag -->
+                            <canvas id="clinicalChart"></canvas>
+                        </div>
+                    </div>
+                    <!--Chart 2 start-->
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <h2>
+                                Verification Status
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2">
+                            <form>
+                                <div class="form-group row">
+                                    <label
+                                        for="inputfromDateChart2"
+                                        class="col-sm-3 col-md-2 col-form-label offset-lg-1 text-lg-right"
+                                        >From Date</label
+                                    >
+                                    <div class="col-sm-7 col-md-4 col-lg-3">
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="inputfromDateChart2"
+                                        />
+                                    </div>
+                                    <label
+                                        for="inputtoDateChart2"
+                                        class="col-sm-3 col-md-2 col-form-label text-lg-right"
+                                        >To Date</label
+                                    >
+                                    <div class="col-sm-7 col-md-4 col-lg-3">
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="inputtoDateChart2"
+                                        />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 mb-5 canvas-box">
+                            <!--       Chart.js Canvas Tag -->
+                            <canvas id="verificationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--Chart 2 end-->
             </section>
         </main>
         <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
         <script src="./libs/bootstrap/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-<script>
-var ctx = document.getElementById('clinicalChart').getContext('2d');
-var data = {
-  labels: ["Active", "Recurrence", "Relapse", "Inactive", "Remission", "Resolved"],
-  datasets: [{
-      label: "13.03.2019",
-      fill: false,
-      lineTension: 0.1,
-      backgroundColor: "rgba(68,114,196,0.8)",
-      borderColor: "red", // The main line color
-      borderCapStyle: 'square',
-      borderDash: [], // try [5, 15] for instance
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: "black",
-      pointBackgroundColor: "white",
-      pointBorderWidth: 1,
-      pointHoverRadius: 8,
-      pointHoverBackgroundColor: "yellow",
-      pointHoverBorderColor: "brown",
-      pointHoverBorderWidth: 2,
-      pointRadius: 4,
-      pointHitRadius: 10,
-      // notice the gap in the data and the spanGaps: true
-      data: [10, 12, 9, 5, 21, 5],
-      spanGaps: true,
-    }, {
-      label: "20.04.2019",
-      fill: true,
-      lineTension: 0.1,
-      backgroundColor: "rgba(237,125,49,0.8)",
-      borderColor: "rgb(167, 105, 0)",
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      // notice the gap in the data and the spanGaps: false
-      data: [4, 5, 8, 8, 17, 8],
-      spanGaps: false,
-    }, {
-      label: "05.05.2019",
-      fill: true,
-      lineTension: 0.1,
-      backgroundColor: "rgba(165,165,165,0.8)",
-      borderColor: "rgb(167, 105, 0)",
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      // notice the gap in the data and the spanGaps: false
-      data: [3, 7, 6, 3, 20, 10],
-      spanGaps: false,
-    },{
-      label: "01.06.2019",
-      fill: true,
-      lineTension: 0.1,
-      backgroundColor: "rgba(255,192,0,0.8)",
-      borderColor: "rgb(167, 105, 0)",
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      // notice the gap in the data and the spanGaps: false
-      data: [7, 2, 0, 2, 9, 6],
-      spanGaps: false,
-    }
-  ]
-};
-
-// Notice the scaleLabel at the same level as Ticks
-var options = {
-  scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                },
-            }],
-            xAxes: [{                
-                scaleLabel: {
-                     display: true,
-                     labelString: 'Clinical Status',
-                     fontSize: 30 
-                  }}],            
-        }  
-};
-
-// Chart declaration:
-var myBarChart = new Chart(ctx, {
-  type: 'bar',
-  data: data,
-  options: options
-});
-
-</script>
-<script>
-        var ctx = document.getElementById('verificationChart').getContext('2d');
-        var data = {
-          labels: ["Confirmed", "Provisional", "Differential", "Refuted", "Entered in Error"],
-          datasets: [{
-              label: "14.03.2019",
-              fill: false,
-              lineTension: 0.1,
-              backgroundColor: "rgba(68,114,196,0.8)",
-              borderColor: "red", // The main line color
-              borderCapStyle: 'square',
-              borderDash: [], // try [5, 15] for instance
-              borderDashOffset: 0.0,
-              borderJoinStyle: 'miter',
-              pointBorderColor: "black",
-              pointBackgroundColor: "white",
-              pointBorderWidth: 1,
-              pointHoverRadius: 8,
-              pointHoverBackgroundColor: "yellow",
-              pointHoverBorderColor: "brown",
-              pointHoverBorderWidth: 2,
-              pointRadius: 4,
-              pointHitRadius: 10,
-              // notice the gap in the data and the spanGaps: true
-              data: [12, 11, 6, 21, 0],
-              spanGaps: true,
-            }, {
-              label: "17.04.2019",
-              fill: true,
-              lineTension: 0.1,
-              backgroundColor: "rgba(237,125,49,0.8)",
-              borderColor: "rgb(167, 105, 0)",
-              borderCapStyle: 'butt',
-              borderDash: [],
-              borderDashOffset: 0.0,
-              borderJoinStyle: 'miter',
-              // notice the gap in the data and the spanGaps: false
-              data: [5, 6, 8, 23, 1],
-              spanGaps: false,
-            }, {
-              label: "01.05.2019",
-              fill: true,
-              lineTension: 0.1,
-              backgroundColor: "rgba(165,165,165,0.8)",
-              borderColor: "rgb(167, 105, 0)",
-              borderCapStyle: 'butt',
-              borderDash: [],
-              borderDashOffset: 0.0,
-              borderJoinStyle: 'miter',
-              // notice the gap in the data and the spanGaps: false
-              data: [7, 9, 4, 14, 1],
-              spanGaps: false,
-            }
-          ]
-        };
-        
-        // Notice the scaleLabel at the same level as Ticks
-        var options = {
-          scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        },
-                    }],
-                    xAxes: [{                
-                        scaleLabel: {
-                             display: true,
-                             labelString: 'Verification Status	',
-                             fontSize: 30 
-                          }}],            
-                }  
-        };
-        
-        // Chart declaration:
-        var myBarChart2 = new Chart(ctx, {
-          type: 'bar',
-          data: data,
-          options: options
-        });
-        
-        </script>
-
+        <script src="./js/clinical_chart.js"></script>
+        <script src="./js/verification_chart.js"></script>
     </body>
 </html>

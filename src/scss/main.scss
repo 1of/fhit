@@ -19,6 +19,7 @@ body {
 }
 header {
     background: $color-dark-blue;
+    font-family: 'DINNextW01-Light', serif;
     color: $color-white;
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@ header {
     .breadcrumb {
         background-color: transparent;
         margin: 4px auto;
+        padding: 0.75rem 0 0;
         .breadcrumb-item {
             a {
                 color: #ccc;
@@ -41,7 +43,6 @@ header {
     .login {
         display: flex;
         justify-content: flex-end;
-        width: 30%;
         .logout-link {
             margin: 8px 0;
         }
@@ -50,7 +51,7 @@ header {
 .navbar {
     background-color: $color-dark-blue;
     justify-content: flex-start;
-    width: 30%;
+    width: 180px;
 }
 .navbar-brand {
     color: $color-white;
@@ -70,7 +71,10 @@ hr {
     margin-top: 0.6rem;
 }
 .nav-link {
-    color: $color-light-blue;
+    color: $color-white;
+    &:hover {
+        color: $color-light-blue;
+    }
 }
 .description {
     color: $color-white;
@@ -137,16 +141,34 @@ hr {
 /* Display Data Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .charts {
+    .canvas-box {
+        height: 60vh;
+    }
     canvas {
         background: $color-white;
     }
     label {
         color: $color-white;
     }
-    input {
-       // width: 160px;
-    }
 }
 
-@media (min-width: 767px) {
+/* Media
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 576px) {
+    header {
+        position: relative;
+        margin-bottom: 32px;
+        .breadcrumbs {
+            position: absolute;
+            width: 100%;
+            top: 55px;
+            left: 0;
+            right: 0;
+            font-size: 0.8rem;
+            background: $color-dark-blue;
+        }
+        .breadcrumb {
+            padding: 0;
+        }
+    }
 }
