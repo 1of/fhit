@@ -4,61 +4,63 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="https://yarn.pm/normalize.css" />
         <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/main.css" />
         <title>Patient Search</title>
     </head>
     <body>
-            <header>
-                    <nav class="navbar">
-                        <button
-                            class="navbar-toggler navbar-dark"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarToggler"
-                            aria-controls="navbarToggler"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
+        <header>
+            <nav class="navbar">
+                <button
+                    class="navbar-toggler navbar-dark"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="home-link">
+                    <a href="#" class="nav-link">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <a class="navbar-brand" href="#">FHIT.IO</a>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./displayData.html"
+                                >Charts</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu Item</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav aria-label="breadcrumb" class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="./patientSearch.html">Cancer Care Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="./verificationStatus.html"
+                            >Verification status</a
                         >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="home-link">
-                            <a href="#" class="nav-link">Home</a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarToggler">
-                            <a class="navbar-brand" href="#">FHIT.IO</a>
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="./displayData.html">Charts</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Menu Item</a>
-                                </li>
-                            </ul>
-                        </div>
-        
-                    </nav>
-                    <nav aria-label="breadcrumb" class="breadcrumbs">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="./patientSearch.html">Cancer Care Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                    <a href="./verificationStatus.html">Verification status</a>
-                            </li>
-                        </ol>
-                    </nav>
-                    <div class="login">
-                        <a
-                            class="nav-link logout-link"
-                            href="#"
-                            tabindex="-1"
-                            aria-disabled="true"
-                            >Logout</a
-                        >
-                    </div>
-                </header>
+                    </li>
+                </ol>
+            </nav>
+            <div class="login">
+                <a
+                    class="nav-link logout-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Logout</a
+                >
+            </div>
+        </header>
         <main class="search-page">
             <!--hospital and doctor description-->
             <section class="description">
