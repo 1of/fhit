@@ -76,7 +76,7 @@ var options = {
             {
                 scaleLabel: {
                     display: true,
-                    labelString: 'Verification Status	',
+                    labelString: 'Verification Status',
                     fontSize: 30
                 },
                 gridLines: {
